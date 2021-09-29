@@ -57,7 +57,7 @@ def guess_block1(ctext, L):
     IV, C1 = ctext[:L], ctext[L:2*L] 
     print('Guessing Block 1...')
     # set current guess
-    curr_guess = [0] * 16
+    curr_guess = [0] * L
     for i in tqdm(range(L-1, -1, -1)):
         iv = IV.copy()
         for p in range(i+1, L, 1):
